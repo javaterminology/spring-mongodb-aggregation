@@ -2,7 +2,6 @@ package com.terminology.aggregation.dao;
 
 public class GroupedDocumentDetails {
 	
-	
 	private String docId;
 	private String docCurrency;
 	private String customerId;
