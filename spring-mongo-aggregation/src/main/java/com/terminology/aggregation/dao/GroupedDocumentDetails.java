@@ -2,6 +2,7 @@ package com.terminology.aggregation.dao;
 
 public class GroupedDocumentDetails {
 	
+	
 	private String docId;
 	private String docCurrency;
 	private String customerId;
@@ -37,5 +38,11 @@ public class GroupedDocumentDetails {
 	}
 	public void setTotalAmt(double totalAmt) {
 		this.totalAmt = totalAmt;
+	}
+	
+	@Override
+	public String toString() {
+		return "GroupedDocumentDetails [docId=" + docId + ", docCurrency=" + docCurrency + ", customerId=" + customerId
+				+ ", countryCode=" + countryCode + ", totalAmt=" + totalAmt + "]";
 	}
 }
