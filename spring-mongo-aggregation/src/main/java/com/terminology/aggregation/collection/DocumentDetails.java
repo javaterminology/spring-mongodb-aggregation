@@ -6,12 +6,10 @@ import org.springframework.data.annotation.Id;
 
 public class DocumentDetails implements Serializable{
 
-
 	private static final long serialVersionUID = -1914252392995730145L;
 	
 	@Id
 	private String docId;
-	
 	private String docCurrency;
 	private String customerId;
 	private String countryCode;
