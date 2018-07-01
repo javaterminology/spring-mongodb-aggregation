@@ -10,6 +10,7 @@ import com.terminology.aggregation.collection.DocumentDetails;
 import com.terminology.aggregation.collection.DocumentRequest;
 import com.terminology.aggregation.collection.DocumentRequestObj;
 import com.terminology.aggregation.dao.AggregationDao;
+import com.terminology.aggregation.dao.GroupedDocumentDetails;
 
 
 public class App 
@@ -80,6 +81,11 @@ public class App
 
 			documentRequest.setDocumentDetails(documentDetails);
 			requestObj.setDocumentRequest(documentRequest);
+			
+			aggregationDao.create(requestObj);
+			
+			List<GroupedDocumentDetails> groupedDocumentDetails = aggregationDao.aggregationByDocKeys();
+			System.out.println(groupedDocumentDetails);
 			
 		}catch(Exception e){
 			e.printStackTrace();
