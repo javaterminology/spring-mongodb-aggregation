@@ -35,6 +35,7 @@ public class AggregationDaoImpl implements AggregationDao{
 				newAggregation(DocumentRequestObj.class,
 				unwind("documentRequest"),
 				unwind("documentRequest.documentDetails"),
+			        match(new Criteria("documentRequest.documentDetails.docId").is("")),
 				group(Fields.fields()
 						.and("docId","$documentRequest.documentDetails.docId")
 						.and("docCurrency","$documentRequest.documentDetails.docCurrency")
