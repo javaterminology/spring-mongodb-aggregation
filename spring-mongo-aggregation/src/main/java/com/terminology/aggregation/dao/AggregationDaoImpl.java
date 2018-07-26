@@ -28,7 +28,7 @@ public class AggregationDaoImpl implements AggregationDao{
 		if(requestObj!=null)
 		this.mongoTemplate.insert(requestObj);
 	}
-
+//apply the $unwind operator first in order to denormalise the embedded documents before using the match pipeline 
 	@Override
 	public List<GroupedDocumentDetails> aggregationByDocKeys() {
 		AggregationResults<GroupedDocumentDetails> aggregationResults = mongoTemplate.aggregate(
